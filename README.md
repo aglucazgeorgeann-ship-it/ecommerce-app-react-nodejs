@@ -1,6 +1,8 @@
 # My eStore: Full-Stack E-commerce Application
 
-![E-commerce App Demo - Placeholder](https://placehold.co/800x400/000000/FFFFFF?text=App+Screenshot/GIF+Here)
+<!-- Para sa overview ng iyong app, pwede kang maglagay ng isa o dalawang pangunahing screenshot dito -->
+<!-- screenshot-1.jpg ay main products page -->
+![My eStore: Products Page](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
 
 A comprehensive full-stack e-commerce application built to demonstrate modern web development practices. This project features a React.js frontend for an intuitive user experience and a Node.js/Express backend with SQLite for robust data management.
 
@@ -24,7 +26,7 @@ A comprehensive full-stack e-commerce application built to demonstrate modern we
     * **Update:** Edit existing product details (name, price, description, image URL).
     * **Delete:** Remove products from the inventory.
 * **Responsive Design:** Optimized for various screen sizes using Tailwind CSS.
-* **Data Persistence:** Product and cart data (cart uses local storage) are persisted.
+* **Data Persistence:** Product data is persisted in SQLite. Cart data is persisted in browser's Local Storage.
 
 ## 🚀 Technologies Used
 
@@ -33,7 +35,7 @@ A comprehensive full-stack e-commerce application built to demonstrate modern we
 * **React Router DOM:** For declarative routing within the application.
 * **Axios:** A promise-based HTTP client for making API requests.
 * **Tailwind CSS:** A utility-first CSS framework for rapid UI development and responsive design.
-* **React Context API:** For state management (specifically for the shopping cart).
+* **React Context API:** For global state management (specifically for the shopping cart).
 
 **Backend (Node.js & Express.js)**
 * **Node.js:** JavaScript runtime environment.
@@ -44,7 +46,7 @@ A comprehensive full-stack e-commerce application built to demonstrate modern we
 
 **Development Tools**
 * **Vite:** A fast build tool for frontend development.
-* **Concurrenty:** A tool to run multiple commands concurrently (used to run both frontend and backend servers with one command).
+* **Concurrently:** A tool to run multiple commands concurrently (used to run both frontend and backend servers with one command).
 * **Git:** Version control system.
 * **GitHub:** For source code hosting and collaboration.
 
@@ -103,10 +105,14 @@ After installing all dependencies, you can start both the backend and frontend s
 
 ## 🖼️ Screenshots / Demo
 
-![E-commerce App Demo](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
+<!-- Dito natin ilalagay ang lahat ng screenshots -->
+![Products Page](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
+![Product Detail Page](https://github.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/blob/main/Screenshot%202025-08-10%20150126.jpg?raw=true)
+![Admin Panel](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/Screenshot%202025-08-10%20150109.jpg)
 
-
+---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the `LICENSE` file (if you add one) for details.
+
