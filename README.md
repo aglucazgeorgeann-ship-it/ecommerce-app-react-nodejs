@@ -103,7 +103,7 @@ After installing all dependencies, you can start both the backend and frontend s
 
 ## 🖼️ Screenshots / Demo
 
-https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg
+![E-commerce App Demo](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
 
 
 
