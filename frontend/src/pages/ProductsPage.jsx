@@ -12,7 +12,8 @@ function ProductsPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/products');
+        // BINAGO DITO: Gamitin ang live backend URL
+        const response = await axios.get('https://ecommerce-app-react-nodejs-1.onrender.com/api/products');
         setProducts(response.data.data);
         setLoading(false);
       } catch (err) {
