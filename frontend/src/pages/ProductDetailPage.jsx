@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } => 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
@@ -14,7 +14,8 @@ function ProductDetailPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/products/${id}`);
+        // Updated API URL
+        const response = await axios.get(`https://ecommerce-app-react-nodejs-1.onrender.com/api/products/${id}`);
         setProduct(response.data.data);
         setLoading(false);
       } catch (err) {
