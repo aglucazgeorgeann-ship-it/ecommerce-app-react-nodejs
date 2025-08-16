@@ -1,5 +1,8 @@
 # My eStore: Full-Stack E-commerce Application
 
+You can view the deployed application here:
+* **Frontend (React):** [https://ecommerce645.netlify.app/](https://ecommerce645.netlify.app/)
+* **Backend (Node.js API):** [https://ecommerce-app-react-nodejs-1.onrender.com](https://ecommerce-app-react-nodejs-1.onrender.com)
 <!-- Para sa overview ng iyong app, pwede kang maglagay ng isa o dalawang pangunahing screenshot dito -->
 <!-- screenshot-1.jpg ay main products page -->
 ![My eStore: Products Page](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
