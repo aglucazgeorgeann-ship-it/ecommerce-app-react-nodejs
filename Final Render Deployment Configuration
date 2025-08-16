@@ -1,0 +1,37 @@
+# Ito ang main Render blueprint file na ilalagay sa ROOT ng iyong monorepo.
+# Ito ang magde-define kung paano ide-deploy ang iyong frontend at backend.
+
+services:
+  # Backend Service
+  - type: web
+    name: ecommerce-app-react-nodejs-backend # Palitan ito ng pangalan ng iyong Render backend service
+    env: node
+    plan: free # O kaya 'starter' / 'standard'
+    # Root directory ng iyong backend project
+    rootDir: backend
+    # Build command para sa backend
+    buildCommand: npm install && npm rebuild sqlite3 --build-from-source
+    # Start command para sa backend server
+    startCommand: npm start # Pwedeng "npm start" kung may "start" script sa package.json (na meron ka)
+    # Port na pinakikinggan ng Node.js app
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000 # Ilagay ang port na ginagamit ng iyong Express app (base sa logs, 10000)
+    healthCheckPath: /api/products # Optional: Magandang maglagay ng health check endpoint
+
+  # Frontend Service
+  - type: static # Gagamitin ang 'static' para sa React frontend (after build)
+    name: ecommerce-app-react-nodejs-frontend # Palitan ito ng pangalan ng iyong Render frontend service
+    rootDir: frontend # Root directory ng iyong frontend project
+    # Build command para sa React app
+    buildCommand: npm install && npm run build
+    # Directory kung saan inilalagay ng 'npm run build' ang built files (default ng Vite ay 'dist')
+    publishPath: frontend/dist
+    # Routes na iwi-wildcard patungo sa index.html para sa client-side routing (React Router)
+    # Eto ang mahalaga para hindi mag-404 ang direct links tulad ng /products/1
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
