@@ -4,6 +4,20 @@
 <!-- screenshot-1.jpg ay main products page -->
 ![My eStore: Products Page](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
 
+## 🖼️ Screenshots / Demo
+
+<!-- Dito natin ilalagay ang lahat ng screenshots -->
+![Products Page](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
+![Product Detail Page](https://github.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/blob/main/Screenshot%202025-08-10%20150126.jpg?raw=true)
+![Admin Panel](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/Screenshot%202025-08-10%20150109.jpg)
+
+---
+
+# My eStore: Full-Stack E-commerce Application
+
+<!-- Actual Screenshot ng iyong App -->
+![My eStore: Products Page](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/ecommerce-app-screenshot-1.jpg)
+
 A comprehensive full-stack e-commerce application built to demonstrate modern web development practices. This project features a React.js frontend for an intuitive user experience and a Node.js/Express backend with SQLite for robust data management.
 
 ## ✨ Features
@@ -103,6 +117,12 @@ After installing all dependencies, you can start both the backend and frontend s
 2.  **Access the Application:**
     Open your web browser and navigate to the frontend URL displayed in your terminal (e.g., `http://localhost:5174/`).
 
+## 🚀 Live Application
+
+You can view the deployed application here:
+* **Frontend (React):** [https://ecommerce-app-react-nodejs-frontend.onrender.com](https://ecommerce-app-react-nodejs-frontend.onrender.com) <!-- Halimbawa lang ito, palitan mo ng ACTUAL Netlify URL mo -->
+* **Backend (Node.js API):** [https://ecommerce-app-react-nodejs-1.onrender.com](https://ecommerce-app-react-nodejs-1.onrender.com)
+
 ## 🖼️ Screenshots / Demo
 
 <!-- Dito natin ilalagay ang lahat ng screenshots -->
@@ -111,6 +131,8 @@ After installing all dependencies, you can start both the backend and frontend s
 ![Admin Panel](https://raw.githubusercontent.com/aglucazgeorgeann-ship-it/ecommerce-app-react-nodejs/refs/heads/main/Screenshot%202025-08-10%20150109.jpg)
 
 ---
+
+
 
 ## 📄 License
 
