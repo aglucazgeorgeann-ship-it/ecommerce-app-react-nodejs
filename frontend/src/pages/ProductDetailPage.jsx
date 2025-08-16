@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/CartContext'; // Import useCart
 
 function ProductDetailPage() {
-  const { id } = useParams();
+  const { id } = useParams(); // Kunin ang ID mula sa URL
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
-  const { addToCart } = useCart();
+  const navigate = useNavigate(); // Hook para sa programmatic navigation
+  const { addToCart } = useCart(); // Gamitin ang addToCart mula sa context
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        // Updated API URL
-        const response = await axios.get(`https://ecommerce-app-react-nodejs-1.onrender.com/api/products/${id}`);
+        // Kunin ang specific product gamit ang ID
+        const response = await axios.get(`http://localhost:3001/api/products/${id}`);
         setProduct(response.data.data);
         setLoading(false);
       } catch (err) {
@@ -26,7 +26,7 @@ function ProductDetailPage() {
     };
 
     fetchProduct();
-  }, [id]);
+  }, [id]); // I-run ulit ang effect kung nagbago ang ID
 
   if (loading) {
     return (
@@ -49,7 +49,7 @@ function ProductDetailPage() {
   return (
     <div className="p-10 max-w-3xl mx-auto my-10 border border-gray-200 rounded-lg shadow-xl bg-white flex flex-col items-center font-sans">
       <img
-        src={product.imageUrl || "https://placehold.co/600x400?text=No+Image"}
+        src={product.imageUrl || "https://placehold.co/600x400?text=No+Image"} // Fallback image
         alt={product.name}
         className="w-full max-w-md h-auto rounded-lg mb-8 object-cover shadow-md"
       />
@@ -62,13 +62,13 @@ function ProductDetailPage() {
       </p>
       <div className="flex gap-4 mt-6">
         <button
-          onClick={() => addToCart(product)}
+          onClick={() => addToCart(product)} // Add to Cart button
           className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-300 shadow-md text-lg font-semibold"
         >
           Add to Cart
         </button>
         <button
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/')} // Button para bumalik sa ProductsPage
           className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300 shadow-md text-lg font-semibold"
         >
           Back to Products
