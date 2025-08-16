@@ -22,7 +22,8 @@ function AdminPage() {
   // Function para kunin ang lahat ng produkto
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/products');
+      // Updated API URL
+      const response = await axios.get('https://ecommerce-app-react-nodejs-1.onrender.com/api/products');
       setProducts(response.data.data);
       setLoading(false);
     } catch (err) {
@@ -45,9 +46,10 @@ function AdminPage() {
     }
 
     try {
-      await axios.post('http://localhost:3001/api/products', {
+      // Updated API URL
+      await axios.post('https://ecommerce-app-react-nodejs-1.onrender.com/api/products', {
         name: newProductName,
-        price: parseFloat(newProductPrice),
+        price: parseFloat(newProductPrice), // Convert to number
         description: newProductDescription,
         imageUrl: newProductImageUrl,
       });
@@ -67,7 +69,8 @@ function AdminPage() {
   const handleDeleteProduct = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) { // Note: Use custom modal instead of confirm in real app
       try {
-        await axios.delete(`http://localhost:3001/api/products/${id}`);
+        // Updated API URL
+        await axios.delete(`https://ecommerce-app-react-nodejs-1.onrender.com/api/products/${id}`);
         alert('Product deleted successfully!');
         fetchProducts(); // I-refresh ang listahan pagkatapos mag-delete
       } catch (err) {
@@ -96,7 +99,8 @@ function AdminPage() {
     if (!editingProduct) return; // Should not happen
 
     try {
-      await axios.put(`http://localhost:3001/api/products/${editingProduct.id}`, {
+      // Updated API URL
+      await axios.put(`https://ecommerce-app-react-nodejs-1.onrender.com/api/products/${editingProduct.id}`, {
         name: editProductName,
         price: parseFloat(editProductPrice),
         description: editProductDescription,
