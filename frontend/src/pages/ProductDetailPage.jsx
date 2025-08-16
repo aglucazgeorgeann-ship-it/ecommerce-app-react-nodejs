@@ -14,8 +14,8 @@ function ProductDetailPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        // Kunin ang specific product gamit ang ID
-        const response = await axios.get(`http://localhost:3001/api/products/${id}`);
+        // BINAGO DITO: Gamitin ang live backend URL
+        const response = await axios.get(`https://ecommerce-app-react-nodejs-1.onrender.com/api/products/${id}`);
         setProduct(response.data.data);
         setLoading(false);
       } catch (err) {
