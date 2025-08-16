@@ -8,14 +8,14 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="min-h-screen bg-gray-100 font-inter">
       <Navbar />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
         <Route path="/products/:id" element={<ProductDetailPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/admin" element={<AdminPage />} /> {/* Bagong Route para sa Admin Page */}
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </div>
   );
